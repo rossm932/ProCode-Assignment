@@ -1,8 +1,10 @@
 //// *Fetch CATAAS API to go here
 /////
 /////
-/////
 
+
+//Waits till the page is fully loaded before the code inside function can run
+//prevents any attempt to access DOM elements that might not yet be available.
 document.addEventListener('DOMContentLoaded', function () {
     const loadMoreButton = document.getElementById('load-more-cats');
     const catGallery = document.getElementById('cat-gallery');
@@ -38,7 +40,7 @@ function displayCatImages(images) {
 
     });
 }
-//* Loads more cat images on click from the html button, 'loadMoreButton already defined to get element ID 'load-more-cats */
+//* Loads more cat images on click from the html button, 'loadMoreButton assigned to get element ID 'load-more-cats */
     loadMoreButton.addEventListener('click', fetchCatImages);
 
     // Initial fetch
