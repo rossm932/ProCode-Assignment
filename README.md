@@ -13,9 +13,9 @@ This project is a simple application that fetches and displays a list of cat ima
 
 ## Features
 
-- Fetches cat images from the Cataas API
+- Fetches cat images from the Cataas API 
 - Displays images in a responsive grid layout
-- Load more images with a button click
+- Load more images with a button click 
 - Handles API errors gracefully
 
 ## Setup

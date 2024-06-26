@@ -7,8 +7,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-}
 
+}/*Styling for heading and sub heading */
 h1 {
     color: #6a1b9a;
     text-align: center;
@@ -19,6 +19,7 @@ h3 {
     text-align: center;
 }
 
+/*Displays the const variable Cat Gallery in a grid display*/
 #cat-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -27,6 +28,7 @@ h3 {
     margin: 20px;
 }
 
+/*Styles the size of the images within the cat gallery variable from the CATAAS API*/
 #cat-gallery img {
     width: 100%;
     height: auto;
