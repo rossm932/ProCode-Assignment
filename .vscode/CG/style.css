@@ -22,7 +22,7 @@ h3 {
     text-align: center;
 }
 
-/*Displays the const variable Cat Gallery in a grid display*/
+/*Styling for the Cat Gallery images display*/
 #cat-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
