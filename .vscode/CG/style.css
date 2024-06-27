@@ -73,6 +73,7 @@ button:hover {
     #cat-gallery {
       flex-direction: column;
       align-items: center;
+      justify-items: center;
     }
   
     #cat-gallery li {
