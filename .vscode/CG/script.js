@@ -3,11 +3,11 @@
 
 //Waits till the page is fully loaded before the code inside function can run,
 //prevents any attempt to access DOM elements that might not yet be available.
-document.addEventListener('DOMContentLoaded', function () { 
+document.addEventListener('DOMContentLoaded', function () {
     const loadMoreButton = document.getElementById('load-more-cats'); //These lines select and store references to DOM elements that will be used later,
     const catGallery = document.getElementById('cat-gallery');        //refrences the html elements where they are displayed
-    const errorMessage = document.getElementById('error-message');
-    const apiUrl = 'https://cataas.com/api/cats?limit=12'; // Used to fetch 12 cat images per click. The response in JSON, and each image is appended to the gallery.
+    const errorMessage = document.getElementById('error-message');    // Refrences where the error message will be displayed
+    const apiUrl = 'https://cataas.com/api/cats?limit=12';            // Used to fetch 12 cat images per click. The response in JSON, and each image is appended to the gallery.
 
     
     async function fetchCatImages() { //This line defines an asynchronous function named fetchCatImages that will be used to fetch cat images from the API.
