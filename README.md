@@ -8,7 +8,7 @@ This project is a simple application that fetches and displays a list of cat ima
 ## Technologies
 
 - HTML5
-- CSS (Responsive design)
+- CSS (Responsive design, Some BootStrap 4 Used)
 - Vanilla JavaScript
 
 ## Features
@@ -22,5 +22,12 @@ This project is a simple application that fetches and displays a list of cat ima
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/cat-gallery.git
-2. Open index.html in a web browser OR use the Liver server VSCode Plugin to view the application.
+   git clone https://github.com/your-username/cat-gallery.git 
+2. Navigate to the project directory
+3. Open index.html in a web browser OR use the Liver server VSCode Plugin to view the application.
+ 
+## Usage
+Open the application in your web browser.
+The initial set of cat images will load automatically.
+Click the "Load More CATS!" button to fetch and display more cat images.
+If there are any issues fetching images, an error message will be displayed.

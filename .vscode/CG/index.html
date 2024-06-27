@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Gallery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Cat Gallery</h1>
+    <div class="container text-center">
+        <h1>The Cat Gallery</h1>
         <h3>For all of you cat lovers!</h3>
         <div id="cat-gallery" class="grid"></div>
-        <button id="load-more-cats" onclick="displayCatImages()">Load More CATS!</button> 
-        <div id="error-message" class="error"></div>
+        <button id="load-more-cats" class="btn btn-primary mt-3" onclick="fetchCatImages()">Load More CATS!</button> 
+        <div id="error-message" class="error mt-3"></div>
+        <div class="alert alert-primary" role="alert">
+            Welcome to the cat gallery, enjoy and observe all the Cats. (Made with the CATAAS API)
+          </div>
         <script src="script.js"></script>
     </div>
 </body>

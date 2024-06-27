@@ -1,7 +1,7 @@
-//// *Fetch CATAAS API to go here *////
+//// *Fetch CATAAS API Script to go here *////
 
 
-//Waits till the page is fully loaded before the code inside function can run
+//Waits till the page is fully loaded before the code inside function can run,
 //prevents any attempt to access DOM elements that might not yet be available.
 document.addEventListener('DOMContentLoaded', function () { 
     const loadMoreButton = document.getElementById('load-more-cats'); //These lines select and store references to DOM elements that will be used later,
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     async function fetchCatImages() { //This line defines an asynchronous function named fetchCatImages that will be used to fetch cat images from the API.
         try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) {
+            const response = await fetch(apiUrl); // Make a GET request to the API.
+            if (!response.ok) {                   // Check if response is okay
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!Array.isArray(data)) {
                 throw new Error('Unexpected API response structure');
             }
-            displayCatImages(data);
+            displayCatImages(data); //If data is valid display cat images, if not display error message
         } catch (error) {
             errorMessage.textContent = `Failed to fetch: ${error.message}`;
         }
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = `No valid image ID found for some images.`;
                 return;
             }
-            // Create a new img element and set its src attribute to the cat image URL
+            // Create a new img and alt text element and set its src attribute to the cat image URL
             img.src = imageUrl;
             img.alt = 'A cute cat';
             img.onerror = () => { //Error handling for image loading
@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
             catGallery.appendChild(li);
         });
     }
-//* Loads more cat images on click from the html button, 'loadMoreButton assigned to get element ID 'load-more-cats */
+    // Loads more cat images on click from the html button, 'loadMoreButton assigned to get element ID 'load-more-cats
     loadMoreButton.addEventListener('click', fetchCatImages);
 
-    // Initial fetch
+    // Initial fetch of cat images when the page loads.
     fetchCatImages();
 });
